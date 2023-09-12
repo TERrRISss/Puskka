@@ -3,13 +3,21 @@ public class Gun {
     private int hit; //попадание
     private int endurance;//прочность
     private String type; //тип
-    public Gun(int ammo, int hit, int endurance, String type){
+    private String color; // цвет (Добавил Савчук В.)
+    public Gun(int ammo, int hit, int endurance, String type, String color){
         this.ammo = ammo;
         this.hit = hit;
         this.endurance = endurance;
         this.type = type;
+        this.color = color;
     }
+    public String getColor() {
+        return color;
 
+    }
+    public void setColor(String color){
+        this.color = color;
+    }
     public int getAmmo() {
         return ammo;
 
@@ -30,6 +38,7 @@ public class Gun {
     public int getHit() {
         return hit;
     }
+    
 
     public void setHit(int hit) {
         this.hit = hit;
@@ -42,7 +51,9 @@ public class Gun {
     public void setType(String type) {
         this.type = type;
     }
-
+    void color(){
+        System.out.println("Цвет оружия: " + this.getColor());
+    }
     void ammo(){
         System.out.println("Кол-во патрон: " + this.getAmmo());
     }
